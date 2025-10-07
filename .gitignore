@@ -1,9 +1,9 @@
 # Dependencies
 node_modules/
 
-# Build output (keep dist/ for GitHub Pages deployment)
-# dist/
-
+# Build output (dist/ is committed for GitHub Pages deployment)
+# Note: dist/ is NOT ignored - it needs to be committed for GitHub Pages
+dist/
 # Logs
 *.log
 npm-debug.log*
