@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output (keep dist/ for GitHub Pages deployment)
+# dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+
+# Large video files (optional - uncomment if you want to host videos externally)
+# assets/*.mp4
+# assets/*.webm
+# assets/*.mov

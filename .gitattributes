@@ -1,0 +1,16 @@
+# Ensure consistent line endings
+* text=auto
+
+# Binary files
+*.mp4 binary
+*.webm binary
+*.mov binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
