@@ -91,10 +91,10 @@
         <div class="container mx-auto">
             <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="block hover:scale-105 transition-transform">
                 <blockquote class="text-center">
-                    <p class="text-3xl md:text-5xl font-bold text-white mb-6 leading-relaxed font-heading">
+                    <p class="text-3xl md:text-5xl font-bold text-white mb-6 leading-relaxed font-heading line-through">
                         "The best way to predict the future is to create it together."
                     </p>
-                    <footer class="text-xl text-melon-800">
+                    <footer class="text-xl text-melon-800 line-through">
                         — Click to learn more
                     </footer>
                 </blockquote>
@@ -142,10 +142,10 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-semibold text-chocolate_cosmos mb-3 font-heading">Getting Here</h3>
-                    <p class="text-cordovan-400 mb-4">
+                    <p class="text-cordovan-400 mb-4 line-through">
                         Detailed directions and transportation options to help you arrive with ease.
                     </p>
-                    <ul class="space-y-2 text-chocolate_cosmos-400">
+                    <ul class="space-y-2 text-chocolate_cosmos-400 line-through">
                         <li>• By car: Parking available</li>
                         <li>• By train: 10 min walk</li>
                         <li>• By bus: Stop nearby</li>
@@ -159,10 +159,10 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-semibold text-chocolate_cosmos mb-3 font-heading">Accommodations</h3>
-                    <p class="text-cordovan-400 mb-4">
+                    <p class="text-cordovan-400 mb-4 line-through">
                         Recommended hotels and lodging options near the venue.
                     </p>
-                    <ul class="space-y-2 text-chocolate_cosmos-400">
+                    <ul class="space-y-2 text-chocolate_cosmos-400 line-through">
                         <li>• Grand Hotel (0.5 mi)</li>
                         <li>• Comfort Inn (1.2 mi)</li>
                         <li>• Budget Lodge (2.0 mi)</li>
@@ -176,15 +176,38 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-semibold text-chocolate_cosmos mb-3 font-heading">Local Tips</h3>
-                    <p class="text-cordovan-400 mb-4">
+                    <p class="text-cordovan-400 mb-4 line-through">
                         Insider information to make your visit more enjoyable.
                     </p>
-                    <ul class="space-y-2 text-chocolate_cosmos-400">
+                    <ul class="space-y-2 text-chocolate_cosmos-400 line-through">
                         <li>• Best restaurants nearby</li>
                         <li>• Weather considerations</li>
                         <li>• What to bring</li>
                     </ul>
                 </div>
+            </div>
+            
+            <!-- Interactive Map Section -->
+            <div class="mt-16">
+                <h3 class="text-3xl font-bold text-chocolate_cosmos text-center mb-8 font-heading">Interactive Map</h3>
+                
+                <!-- Embedded Map -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                    <iframe 
+                        id="visitor-map"
+                        src="https://www.google.com/maps/d/embed?mid=1guPH1XzRA9GwbAvSLlIwYMJ6xO8tDC8&ll=37.78664500022318,-122.41515163739476&z=13"
+                        width="100%" 
+                        height="600" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <p class="text-center text-chocolate_cosmos-400 mt-4 text-sm">
+                    💡 Click markers on the map for more information. Use the layer menu (☰) on the map to show/hide different categories.
+                </p>
             </div>
         </div>
     </section>
@@ -195,22 +218,22 @@
             <h2 class="text-4xl font-bold text-chocolate_cosmos text-center mb-12 font-heading">Our Story</h2>
             <div class="bg-white rounded-lg shadow-xl p-8 md:p-12">
                 <div class="prose prose-lg max-w-none">
-                    <p class="text-cordovan-400 text-lg leading-relaxed mb-6">
+                    <p class="text-cordovan-400 text-lg leading-relaxed mb-6 line-through">
                         It all began with a simple idea and a shared vision. What started as a small gathering 
                         has grown into something truly special—a celebration of community, connection, and the 
                         moments that bring us together.
                     </p>
-                    <p class="text-cordovan-400 text-lg leading-relaxed mb-6">
+                    <p class="text-cordovan-400 text-lg leading-relaxed mb-6 line-through">
                         Over the years, we've witnessed countless memories being made, friendships being forged, 
                         and dreams being realized. Each event has been a testament to the power of coming together 
                         with purpose and passion.
                     </p>
-                    <p class="text-cordovan-400 text-lg leading-relaxed mb-6">
+                    <p class="text-cordovan-400 text-lg leading-relaxed mb-6 line-through">
                         Today, RANGEL4EVER stands as more than just an event—it's a tradition, a family, and a 
                         promise to continue creating experiences that inspire and unite us all.
                     </p>
                     <div class="mt-8 p-6 bg-melon-900 rounded-lg border-l-4 border-redwood">
-                        <p class="text-chocolate_cosmos italic text-lg font-heading">
+                        <p class="text-chocolate_cosmos italic text-lg font-heading line-through">
                             "Together, we've built something extraordinary. This is our story, and you're part of it."
                         </p>
                     </div>
