@@ -55,11 +55,24 @@ Options for hosting and optimizing your hero video.
 
 ---
 
+### [FORMATTING-GUIDE.md](FORMATTING-GUIDE.md)
+How to use Markdown formatting in your Google Sheets content.
+
+**Topics covered:**
+- Bold, italic, and link formatting
+- Markdown syntax reference
+- Examples for Schedule and FAQ sheets
+- Testing and troubleshooting
+- Security features
+
+---
+
 ## 🚀 Quick Links
 
 - **First time setup?** → [GETTING-STARTED.md](GETTING-STARTED.md)
 - **Ready to deploy?** → [DEPLOYMENT.md](DEPLOYMENT.md)
 - **Want dynamic content?** → [GOOGLE-SHEETS.md](GOOGLE-SHEETS.md)
+- **Need formatting in sheets?** → [FORMATTING-GUIDE.md](FORMATTING-GUIDE.md)
 - **Video not working?** → [VIDEO-SETUP.md](VIDEO-SETUP.md)
 
 ---

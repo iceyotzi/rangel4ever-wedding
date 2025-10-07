@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    /* Prevent long URLs and text from breaking layout */
+    .text-cordovan-400 a,
+    .text-cordovan-400 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    /* Ensure links break properly on mobile */
+    a[href] {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}

@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RANGEL4EVER</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/favicon.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -22,6 +27,7 @@
                     <a href="#schedule" class="text-chocolate_cosmos-500 hover:text-redwood transition-colors font-semibold">Schedule</a>
                     <a href="#visitor-guides" class="text-chocolate_cosmos-500 hover:text-redwood transition-colors font-semibold">Visitor Guides</a>
                     <a href="#our-story" class="text-chocolate_cosmos-500 hover:text-redwood transition-colors font-semibold">Our Story</a>
+                    <a href="https://www.amazon.com/wedding/guest-view/90A2KOA2YAH0" target="_blank" rel="noopener noreferrer" class="text-chocolate_cosmos-500 hover:text-redwood transition-colors font-semibold">Registry</a>
                     <a href="#faq" class="text-chocolate_cosmos-500 hover:text-redwood transition-colors font-semibold">FAQ</a>
                 </div>
                 <!-- Mobile menu button -->
@@ -37,6 +43,7 @@
                 <a href="#schedule" class="block py-2 text-chocolate_cosmos-500 hover:text-redwood font-semibold">Schedule</a>
                 <a href="#visitor-guides" class="block py-2 text-chocolate_cosmos-500 hover:text-redwood font-semibold">Visitor Guides</a>
                 <a href="#our-story" class="block py-2 text-chocolate_cosmos-500 hover:text-redwood font-semibold">Our Story</a>
+                <a href="https://www.amazon.com/wedding/guest-view/90A2KOA2YAH0" class="block py-2 text-chocolate_cosmos-500 hover:text-redwood font-semibold">Registry</a>
                 <a href="#faq" class="block py-2 text-chocolate_cosmos-500 hover:text-redwood font-semibold">FAQ</a>
             </div>
         </div>
@@ -212,6 +219,30 @@
         </div>
     </section>
 
+    <!-- Wedding Registry Section -->
+    <section id="registry" class="py-20 px-4 bg-cordovan">
+        <div class="container mx-auto">
+            <a href="https://www.amazon.com/wedding/guest-view/90A2KOA2YAH0" target="_blank" rel="noopener noreferrer" class="block hover:scale-105 transition-transform">
+                <div class="text-center">
+                    <!-- Gift Icon -->
+                    <div class="mb-6 flex justify-center">
+                        <svg class="w-20 h-20 text-melon-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+                        </svg>
+                    </div>
+                    <blockquote>
+                        <p class="text-3xl md:text-5xl font-bold text-white mb-6 leading-relaxed font-heading">
+                            Your presence is the best gift... but the second best can be found on our registry. 😂
+                        </p>
+                        <footer class="text-xl text-melon-800">
+                            — Click to view our registry
+                        </footer>
+                    </blockquote>
+                </div>
+            </a>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section id="faq" class="py-20 px-4 bg-white">
         <div class="container mx-auto max-w-4xl">
@@ -243,15 +274,16 @@
     <footer class="bg-chocolate_cosmos text-white py-12 px-4">
         <div class="container mx-auto text-center">
             <h3 class="text-2xl font-bold mb-4 font-heading">RANGEL4EVER</h3>
-            <p class="text-melon-700 mb-6">Creating memories that last forever</p>
+            <p class="text-melon-700 mb-6">Making memories since 2022</p>
             <div class="flex justify-center space-x-6 mb-6">
                 <a href="#home" class="text-melon-700 hover:text-melon transition-colors font-semibold">Home</a>
                 <a href="#schedule" class="text-melon-700 hover:text-melon transition-colors font-semibold">Schedule</a>
                 <a href="#visitor-guides" class="text-melon-700 hover:text-melon transition-colors font-semibold">Guides</a>
                 <a href="#our-story" class="text-melon-700 hover:text-melon transition-colors font-semibold">Story</a>
+                <a href="https://www.amazon.com/wedding/guest-view/90A2KOA2YAH0" target="_blank" rel="noopener noreferrer" class="text-melon-700 hover:text-melon transition-colors font-semibold">Registry</a>
                 <a href="#faq" class="text-melon-700 hover:text-melon transition-colors font-semibold">FAQ</a>
             </div>
-            <p class="text-melon-800">&copy; 2025 RANGEL4EVER. Built with ❤️ and Tailwind CSS.</p>
+            <p class="text-melon-800">&copy; 2025 RANGEL4EVER</p>
         </div>
     </footer>
 
@@ -261,6 +293,19 @@
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         }
+        
+        // Close mobile menu when clicking a link
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Close the menu
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
 
         // ============================================
         // GOOGLE SHEETS INTEGRATION (OPTIMIZED - CSV METHOD)
@@ -301,7 +346,11 @@
                 }
                 
                 const csvText = await response.text();
+                console.log('📊 Schedule CSV received, length:', csvText.length);
+                console.log('📄 First 500 chars:', csvText.substring(0, 500));
+                
                 const events = parseCSV(csvText);
+                console.log('✅ Parsed events:', events);
                 
                 if (!events || events.length === 0) {
                     throw new Error('No events found in the schedule');
@@ -316,7 +365,8 @@
                 
                 // Clear and populate container
                 containerEl.innerHTML = '';
-                events.forEach(event => {
+                events.forEach((event, index) => {
+                    console.log(`🎫 Creating event card ${index + 1}:`, event);
                     const eventCard = createEventCard(event);
                     containerEl.appendChild(eventCard);
                 });
@@ -359,7 +409,11 @@
                 }
                 
                 const csvText = await response.text();
+                console.log('📊 FAQ CSV received, length:', csvText.length);
+                console.log('📄 First 500 chars:', csvText.substring(0, 500));
+                
                 const faqs = parseCSV(csvText);
+                console.log('✅ Parsed FAQs:', faqs);
                 
                 if (!faqs || faqs.length === 0) {
                     throw new Error('No FAQs found');
@@ -374,7 +428,8 @@
                 
                 // Clear and populate container
                 containerEl.innerHTML = '';
-                faqs.forEach(faq => {
+                faqs.forEach((faq, index) => {
+                    console.log(`❓ Creating FAQ card ${index + 1}:`, faq);
                     const faqCard = createFAQCard(faq);
                     containerEl.appendChild(faqCard);
                 });
@@ -393,30 +448,74 @@
             }
         }
         
-        // Parse CSV to JSON array
+        // Parse CSV to JSON array (handles multi-line cells)
         function parseCSV(csv) {
-            const lines = csv.trim().split('\n');
-            if (lines.length < 2) {
+            console.log('🔍 parseCSV: Starting CSV parse');
+            const rows = [];
+            let currentRow = [];
+            let currentField = '';
+            let inQuotes = false;
+            
+            // Parse character by character to handle quoted fields with newlines
+            for (let i = 0; i < csv.length; i++) {
+                const char = csv[i];
+                const nextChar = csv[i + 1];
+                
+                if (char === '"') {
+                    if (inQuotes && nextChar === '"') {
+                        // Escaped quote
+                        currentField += '"';
+                        i++; // Skip next quote
+                    } else {
+                        // Toggle quote mode
+                        inQuotes = !inQuotes;
+                    }
+                } else if (char === ',' && !inQuotes) {
+                    // End of field
+                    currentRow.push(currentField);
+                    currentField = '';
+                } else if (char === '\n' && !inQuotes) {
+                    // End of row
+                    currentRow.push(currentField);
+                    if (currentRow.some(field => field.trim() !== '')) {
+                        rows.push(currentRow);
+                    }
+                    currentRow = [];
+                    currentField = '';
+                } else {
+                    // Regular character (including newlines inside quotes)
+                    currentField += char;
+                }
+            }
+            
+            // Push last field and row
+            if (currentField || currentRow.length > 0) {
+                currentRow.push(currentField);
+                if (currentRow.some(field => field.trim() !== '')) {
+                    rows.push(currentRow);
+                }
+            }
+            
+            console.log('📊 Parsed rows:', rows.length);
+            console.log('📋 First row (headers):', rows[0]);
+            
+            if (rows.length < 2) {
                 throw new Error('CSV file is empty or invalid');
             }
             
-            const headers = parseCSVLine(lines[0]);
+            const headers = rows[0].map(h => h.trim());
             const events = [];
             
-            for (let i = 1; i < lines.length; i++) {
-                const values = parseCSVLine(lines[i]);
-                
-                // Skip empty lines
-                if (values.length === 0 || values.every(v => !v)) {
-                    continue;
-                }
+            for (let i = 1; i < rows.length; i++) {
+                const values = rows[i];
                 
                 if (values.length === headers.length) {
                     const event = {};
                     headers.forEach((header, index) => {
-                        event[header.trim()] = values[index].trim();
+                        event[header] = values[index].trim();
                     });
                     events.push(event);
+                    console.log(`📝 Row ${i}:`, event);
                 }
             }
             
@@ -455,21 +554,23 @@
         // Create an event card element
         function createEventCard(event) {
             const card = document.createElement('div');
-            card.className = 'bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow';
+            card.className = 'bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow overflow-hidden';
+            
+            const parsedDescription = parseMarkdown(event.description || '', `Event: ${event.title}`);
             
             card.innerHTML = `
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-                    <div class="mb-4 md:mb-0">
-                        <h3 class="text-2xl font-semibold text-chocolate_cosmos mb-2 font-heading">
+                    <div class="mb-4 md:mb-0 md:flex-1 md:mr-6 overflow-hidden">
+                        <h3 class="text-2xl font-semibold text-chocolate_cosmos mb-2 font-heading break-words">
                             ${escapeHtml(event.title || 'Untitled Event')}
                         </h3>
-                        <p class="text-cordovan-400">
-                            ${escapeHtml(event.description || '')}
-                        </p>
+                        <div class="text-cordovan-400 break-words overflow-wrap-anywhere">
+                            ${parsedDescription}
+                        </div>
                     </div>
-                    <div class="text-redwood font-semibold md:text-right">
-                        <p class="text-lg">${escapeHtml(event.date || '')}</p>
-                        <p>${escapeHtml(event.time || '')}</p>
+                    <div class="text-redwood font-semibold md:text-right md:flex-shrink-0">
+                        <p class="text-lg break-words">${escapeHtml(event.date || '')}</p>
+                        <p class="break-words">${escapeHtml(event.time || '')}</p>
                     </div>
                 </div>
             `;
@@ -480,15 +581,17 @@
         // Create a FAQ card element
         function createFAQCard(faq) {
             const card = document.createElement('div');
-            card.className = 'bg-gradient-to-br from-apricot-800 to-melon-800 rounded-lg shadow-lg p-6';
+            card.className = 'bg-gradient-to-br from-apricot-800 to-melon-800 rounded-lg shadow-lg p-6 overflow-hidden';
+            
+            const parsedAnswer = parseMarkdown(faq.answer || '', `FAQ: ${faq.question}`);
             
             card.innerHTML = `
-                <h3 class="text-xl font-semibold text-chocolate_cosmos mb-3 font-heading">
+                <h3 class="text-xl font-semibold text-chocolate_cosmos mb-3 font-heading break-words">
                     ${escapeHtml(faq.question || 'Question')}
                 </h3>
-                <p class="text-cordovan-400">
-                    ${escapeHtml(faq.answer || '')}
-                </p>
+                <div class="text-cordovan-400 break-words overflow-wrap-anywhere">
+                    ${parsedAnswer}
+                </div>
             `;
             
             return card;
@@ -500,6 +603,74 @@
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
+        }
+        
+        // Parse simple Markdown formatting (bold, italic, links, line breaks, lists)
+        function parseMarkdown(text, debugLabel = '') {
+            if (!text) return '';
+            
+            console.group(`🔍 parseMarkdown${debugLabel ? ` (${debugLabel})` : ''}`);
+            console.log('📥 Input text:', text);
+            console.log('📏 Length:', text.length);
+            console.log('🔢 Char codes (first 100):', text.substring(0, 100).split('').map((c, i) => 
+                c === '\n' ? `[LF:${text.charCodeAt(i)}]` : 
+                c === '\r' ? `[CR:${text.charCodeAt(i)}]` : 
+                c === '*' ? `[*:${text.charCodeAt(i)}]` : 
+                c === ' ' ? `[SP]` : c
+            ).join(''));
+            console.log('📊 Line breaks:', {
+                LF: (text.match(/\n/g) || []).length,
+                CR: (text.match(/\r(?!\n)/g) || []).length,
+                CRLF: (text.match(/\r\n/g) || []).length
+            });
+            
+            // First escape HTML to prevent XSS
+            let html = escapeHtml(text);
+            console.log('1️⃣ After escapeHtml:', html.substring(0, 200));
+            
+            // Convert line breaks to <br> first (before other processing)
+            html = html.replace(/\n/g, '<br>');
+            console.log('2️⃣ After \\n → <br>:', html.substring(0, 200));
+            
+            // Convert bullet lists BEFORE italic processing (to avoid * being treated as italic)
+            // Lines starting with - or * followed by space
+            const beforeListConversion = html;
+            html = html.replace(/<br>[\s]*[-\*]\s+/g, '<br>• ');
+            console.log('3️⃣ After <br>[-*]\\s+ → <br>•:', html.substring(0, 200));
+            console.log('   Matches found:', beforeListConversion !== html);
+            
+            // Handle first line if it starts with - or *
+            const beforeFirstLine = html;
+            html = html.replace(/^[\s]*[-\*]\s+/g, '• ');
+            console.log('4️⃣ After ^[-*]\\s+ → •:', html.substring(0, 200));
+            console.log('   First line converted:', beforeFirstLine !== html);
+            
+            // Convert numbered lists: lines starting with 1. 2. etc
+            html = html.replace(/<br>[\s]*(\d+)\.\s+/g, '<br>$1. ');
+            console.log('5️⃣ After numbered lists:', html.substring(0, 200));
+            
+            // Now convert **bold** to <strong>
+            const boldMatches = html.match(/\*\*([^\*]+)\*\*/g);
+            html = html.replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>');
+            console.log('6️⃣ After **bold**:', html.substring(0, 200));
+            console.log('   Bold matches:', boldMatches);
+            
+            // Convert *italic* to <em> (single asterisks not part of **)
+            const italicMatches = html.match(/\*([^\*\n]+?)\*/g);
+            html = html.replace(/\*([^\*\n]+?)\*/g, '<em>$1</em>');
+            console.log('7️⃣ After *italic*:', html.substring(0, 200));
+            console.log('   Italic matches:', italicMatches);
+            
+            // Convert [link text](url) to <a>
+            const linkMatches = html.match(/\[([^\]]+)\]\(([^)]+)\)/g);
+            html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-redwood hover:text-cordovan underline font-semibold">$1</a>');
+            console.log('8️⃣ After [links](url):', html.substring(0, 200));
+            console.log('   Link matches:', linkMatches);
+            
+            console.log('✅ Final output:', html);
+            console.groupEnd();
+            
+            return html;
         }
         
         // Load schedule and FAQs when page loads

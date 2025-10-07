@@ -47,16 +47,22 @@ Create a sheet with these columns:
 
 | title | description | date | time | order |
 |-------|-------------|------|------|-------|
-| Opening Ceremony | Join us for the grand opening | Saturday, Oct 15 | 10:00 AM - 12:00 PM | 1 |
-| Main Event | The highlight of our celebration | Saturday, Oct 15 | 2:00 PM - 6:00 PM | 2 |
+| Opening Ceremony | Join us for the **grand opening** celebration! | Saturday, Oct 15 | 10:00 AM - 12:00 PM | 1 |
+| Main Event | The *highlight* of our celebration with [live music](https://example.com) | Saturday, Oct 15 | 2:00 PM - 6:00 PM | 2 |
 | Evening Reception | Dinner and entertainment | Saturday, Oct 15 | 7:00 PM - 11:00 PM | 3 |
 
 **Required columns:**
 - `title` - Event name
-- `description` - Event details
+- `description` - Event details (supports **Markdown formatting**!)
 - `date` - Event date
 - `time` - Event time
 - `order` - Display order (1, 2, 3, etc.)
+
+**✨ Formatting Support:**
+- Use `**bold**` for bold text
+- Use `*italic*` for italic text
+- Use `[link text](url)` for clickable links
+- See [FORMATTING-GUIDE.md](FORMATTING-GUIDE.md) for details
 
 ### FAQs Sheet
 
@@ -64,14 +70,20 @@ Create a sheet with these columns:
 
 | id | question | answer |
 |----|----------|--------|
-| 1 | What time should I arrive? | Please arrive 15 minutes before the scheduled start time. |
-| 2 | Is parking available? | Yes, free parking is available on-site. |
-| 3 | What should I wear? | Semi-formal attire is recommended. |
+| 1 | What time should I arrive? | Please arrive **15 minutes early** for check-in. |
+| 2 | Is parking available? | Yes, **free parking** is available. See our [parking map](https://maps.google.com). |
+| 3 | What should I wear? | *Semi-formal attire* is recommended. Check our [dress code guide](https://example.com). |
 
 **Required columns:**
 - `id` - Display order (1, 2, 3, etc.)
 - `question` - The question
-- `answer` - The answer
+- `answer` - The answer (supports **Markdown formatting**!)
+
+**✨ Formatting Support:**
+- Use `**bold**` for bold text
+- Use `*italic*` for italic text
+- Use `[link text](url)` for clickable links
+- See [FORMATTING-GUIDE.md](FORMATTING-GUIDE.md) for details
 
 ---
 
