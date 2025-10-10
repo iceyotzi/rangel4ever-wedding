@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    /* Ensure box-sizing includes padding and borders */
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    
+    /* Prevent horizontal overscroll/bounce on mobile */
+    html {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    body {
+        overscroll-behavior-x: none;
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+}
+
 @layer components {
     /* Prevent long URLs and text from breaking layout */
     .text-cordovan-400 a,
@@ -16,5 +38,33 @@
     a[href] {
         word-wrap: break-word;
         overflow-wrap: break-word;
+    }
+    
+    /* Constrain all sections to viewport width */
+    section {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    /* Ensure nav stays within viewport */
+    nav {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Ensure video container doesn't overflow */
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Hide scrollbar for horizontal gallery while keeping it functional */
+    .scrollbar-hide {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;  /* Chrome, Safari and Opera */
     }
 }
